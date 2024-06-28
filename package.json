@@ -1,0 +1,17 @@
+{
+  "name": "chrome-mask",
+  "version": "1.0.0",
+  "description": "Makes Firefox wear a mask to look like Chrome.",
+  "author": "Dennis Schubert <mail@dennis-schubert.de>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "npx web-ext build -s src/ -a dist/",
+    "lint": "npx prettier --write .",
+    "start": "npx web-ext run --devtools -s src/ -u https://duckduckgo.com/?q=user+agent"
+  },
+  "devDependencies": {
+    "prettier": "3.3.2",
+    "web-ext": "8.2.0"
+  }
+}

@@ -1,0 +1,93 @@
+:root {
+  --background-color: #42414c;
+  --border-color: #717079;
+  --color: #fff;
+  --toggle-background: #5f5e68;
+
+  @media (prefers-color-scheme: light) {
+    --background-color: #fff;
+    --border-color: #c4c4c5;
+    --color: #15141a;
+    --toggle-background: #e2e2e3;
+  }
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--color);
+  font-family: sans-serif;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+  width: 290px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+}
+
+p {
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+
+  a,
+  a:focus,
+  a:active {
+    color: var(--color);
+  }
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+}
+
+.fancy_toggle_container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.fancy_toggle {
+  cursor: pointer;
+  display: inline-block;
+
+  div {
+    background: var(--toggle-background);
+    border-radius: 25px;
+    height: 50px;
+    position: relative;
+    width: 100px;
+
+    &::after {
+      background-color: #fff;
+      background-image: url(assets/toggler-icon-firefox.png);
+      background-size: contain;
+      border-radius: 30px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+      content: "";
+      height: 60px;
+      left: -5px;
+      position: absolute;
+      top: -5px;
+      width: 60px;
+    }
+  }
+
+  input {
+    display: none;
+
+    &:checked {
+      ~ div {
+        background: #2ac3a2;
+      }
+
+      ~ div::after {
+        background-image: url(assets/toggler-icon-chrome.png);
+        transform: translateX(55px);
+      }
+    }
+  }
+}

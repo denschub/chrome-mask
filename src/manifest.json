@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+  "name": "Chrome Mask",
+  "description": "Makes Firefox wear a mask to look like Chrome.",
+  "author": "Dennis Schubert",
+  "homepage_url": "https://github.com/denschub/chrome-mask",
+  "version": "1.0.0",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "chrome-mask@overengineer.dev",
+      "strict_min_version": "115.0"
+    },
+    "gecko_android": {
+      "id": "chrome-mask@overengineer.dev",
+      "strict_min_version": "115.0"
+    }
+  },
+  "permissions": ["storage", "tabs", "webRequest", "webRequestBlocking", "<all_urls>"],
+  "icons": {
+    "32": "assets/icon-32.png",
+    "48": "assets/icon-48.png",
+    "64": "assets/icon-64.png",
+    "96": "assets/icon-96.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "32": "assets/icon-32.png",
+      "48": "assets/icon-48.png",
+      "64": "assets/icon-64.png",
+      "96": "assets/icon-96.png"
+    },
+    "default_title": "Chrome Mask",
+    "default_popup": "popup.html",
+    "default_area": "navbar"
+  },
+  "background": {
+    "scripts": ["shared.js", "background_script.js"]
+  }
+}
