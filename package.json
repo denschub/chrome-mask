@@ -5,13 +5,18 @@
   "author": "Dennis Schubert <mail@dennis-schubert.de>",
   "license": "MIT",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "npx web-ext build -s src/ -a dist/",
     "lint": "npx prettier --write .",
-    "start": "npx web-ext run --devtools -s src/ -u https://duckduckgo.com/?q=user+agent"
+    "start": "npx web-ext run --devtools -s src/ -u https://duckduckgo.com/?q=user+agent",
+    "version-number-update": "node version_number_updater/main.js"
   },
   "devDependencies": {
     "prettier": "3.3.2",
     "web-ext": "8.2.0"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "3.606.0"
   }
 }
