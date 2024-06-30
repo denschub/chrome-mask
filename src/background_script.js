@@ -1,6 +1,6 @@
-let contentScriptHandle = null;
-let targetChromeUA = null;
+const chromeUAStringManager = new ChromeUAStringManager();
 const enabledHostnames = new EnabledHostnamesList();
+let contentScriptHandle = null;
 
 function matchPatternsForHostnames(hostnames) {
   return hostnames.map((n) => `*://${n}/*`);
@@ -47,7 +47,7 @@ async function contentScriptSetup() {
 function onBeforeSendHeadersHandler(details) {
   for (const header of details.requestHeaders) {
     if (header.name.toLowerCase() === "user-agent") {
-      header.value = targetChromeUA;
+      header.value = chromeUAStringManager.getUAString();
     }
   }
 
@@ -81,7 +81,7 @@ async function init() {
     }
   });
 
-  targetChromeUA = await GetChromeUA();
+  await chromeUAStringManager.init();
   await contentScriptSetup();
   setupOnBeforeSendHeaders();
 }
