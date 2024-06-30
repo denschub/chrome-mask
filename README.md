@@ -8,7 +8,7 @@ This extension is available on addons.mozilla.org, [install this extension via a
 
 There are a lot of generic "User Agent spoof" extensions. However, this extension does a few things differently:
 
-- Unlike some extensions with outdated version numbers and UA strings, this extension should see regular updates.
+- Unlike some extensions with outdated version numbers and UA strings, this extension automatically updates the Chrome version it pretends to be. It does that by querying a simple API every 24 hours, check [the privacy policy](./Privacy.md) for a bit more details.
 - You don't have to pick the correct Operating System manually; this extension does it for you.
 - This extension also shims a few additional JavaScript attributes, like `navigator.vendor` or the global `chrome` object, to pass common browser checks.
 
