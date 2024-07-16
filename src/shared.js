@@ -2,15 +2,39 @@ class EnabledHostnamesList {
   #set = new Set();
 
   async load() {
-    const storage = await browser.storage.sync.get("enabledHostnames");
+    const storage = await browser.storage.local.get(["enabledHostnames", "storageVersion"]);
     if (storage?.enabledHostnames) {
       this.#set = new Set(storage.enabledHostnames);
+      return;
     }
+
+    // In V3, this addon switched from browser.storage.sync to browser.storage.local. In reality, this didn't make a
+    // difference because .sync storage doesn't actually sync in Firefox yet.
+    // But even if it did - it would make no sense. The set of sites that need a Chrome spoof on Mobile is very
+    // different from the set of sites on Desktop. This code migrates the old sync storage data.
+
+    if (storage?.storageVersion >= 3) {
+      return;
+    }
+
+    const syncStorage = await browser.storage.sync.get();
+    if (Object.keys(syncStorage).length > 0) {
+      console.info("migrating old sync storage to local");
+
+      await browser.storage.local.set(syncStorage);
+      await browser.storage.sync.clear();
+
+      if (syncStorage.enabledHostnames) {
+        this.#set = new Set(syncStorage.enabledHostnames);
+      }
+    }
+
+    await browser.storage.local.set({ storageVersion: 3 });
   }
 
   async #persist() {
     const enabledHostnames = Array.from(this.#set.values());
-    await browser.storage.sync.set({ enabledHostnames });
+    await browser.storage.local.set({ enabledHostnames });
 
     try {
       await browser.runtime.sendMessage({ action: "enabled_hostnames_changed" });
@@ -67,7 +91,7 @@ class ChromeUAStringManager {
   async buildUAStringFromStorage() {
     let currentChromeVersion = "126";
 
-    const storedMajorVersion = (await browser.storage.sync.get("remoteStorageVersionNumber"))
+    const storedMajorVersion = (await browser.storage.local.get("remoteStorageVersionNumber"))
       ?.remoteStorageVersionNumber?.version;
     if (storedMajorVersion) {
       currentChromeVersion = storedMajorVersion;
@@ -84,7 +108,7 @@ class ChromeUAStringManager {
   }
 
   async maybeRefreshRemote() {
-    const updatedAt = (await browser.storage.sync.get("remoteStorageVersionNumber"))?.remoteStorageVersionNumber
+    const updatedAt = (await browser.storage.local.get("remoteStorageVersionNumber"))?.remoteStorageVersionNumber
       ?.updatedAt;
 
     if (updatedAt > Date.now() - 24 * 60 * 60 * 1000) {
@@ -100,7 +124,7 @@ class ChromeUAStringManager {
       }
 
       const remoteResponse = await remoteResponseRaw.text();
-      await browser.storage.sync.set({
+      await browser.storage.local.set({
         remoteStorageVersionNumber: {
           version: remoteResponse.trim(),
           updatedAt: Date.now(),
