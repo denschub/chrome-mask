@@ -23,13 +23,8 @@
     "96": "assets/icon-96.png"
   },
   "browser_action": {
-    "default_icon": {
-      "32": "assets/icon-32.png",
-      "48": "assets/icon-48.png",
-      "64": "assets/icon-64.png",
-      "96": "assets/icon-96.png"
-    },
-    "default_title": "Chrome Mask",
+    "default_icon": "assets/badge-indicator-off.svg",
+    "default_title": "Chrome Mask is off",
     "default_popup": "popup.html",
     "default_area": "navbar"
   },

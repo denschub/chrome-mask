@@ -70,6 +70,33 @@ function setupOnBeforeSendHeaders() {
   );
 }
 
+function updateBadgeStatus(currentTab) {
+  const currentHostname = new URL(currentTab.url).hostname;
+  const urls = [...enabledHostnames.get_values()];
+
+  if (urls.includes(currentHostname)) {
+    browser.browserAction.setIcon({
+      path: "assets/badge-indicator-on.svg",
+    });
+    browser.browserAction.setTitle({ title: "Chrome Mask is on." });
+  } else {
+    browser.browserAction.setIcon({
+      path: "assets/badge-indicator-off.svg",
+    });
+    browser.browserAction.setTitle({ title: "Chrome Mask is off." });
+  }
+}
+
+async function handleTabActived(activeInfo) {
+  const currentTab = await browser.tabs.get(activeInfo.tabId);
+  updateBadgeStatus(currentTab);
+}
+
+async function handleTabUpdated(tabId, changeInfo, tabInfo) {
+  const currentTab = await browser.tabs.get(tabId);
+  updateBadgeStatus(currentTab);
+}
+
 async function init() {
   browser.runtime.onMessage.addListener(async (msg) => {
     switch (msg.action) {
@@ -80,6 +107,9 @@ async function init() {
         throw new Error("unexpected message received", msg);
     }
   });
+
+  browser.tabs.onActivated.addListener(handleTabActived);
+  browser.tabs.onUpdated.addListener(handleTabUpdated);
 
   await chromeUAStringManager.init();
   await contentScriptSetup();
