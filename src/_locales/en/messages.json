@@ -1,0 +1,37 @@
+{
+  "extensionName": {
+    "message": "Chrome Mask"
+  },
+
+  "extensionDescription": {
+    "message": "Makes Firefox wear a mask to look like Chrome to websites that otherwise won't work."
+  },
+
+  "reportBrokenSite": {
+    "message": "If this site isn't working in Firefox without the mask, but perfectly fine with it, please report that to Mozilla! You can report it $WEBCOMPAT$, or $BUGZILLA$ if you have an account. Thank you! &hearts;",
+    "placeholders": {
+      "WEBCOMPAT": {
+        "content": "$1"
+      },
+      "BUGZILLA": {
+        "content": "$2"
+      }
+    }
+  },
+
+  "webcompatLinkText": {
+    "message": "completely anonymously on WebCompat.com"
+  },
+
+  "bugzillaLinkText": {
+    "message": "on Bugzilla"
+  },
+
+  "maskStatusOn": {
+    "message": "The mask is on! I pretend to be Chrome on this site."
+  },
+
+  "maskStatusOff": {
+    "message": "The mask is off. I look like Firefox to this site."
+  }
+}

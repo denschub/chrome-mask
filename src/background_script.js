@@ -78,12 +78,16 @@ function updateBadgeStatus(currentTab) {
     browser.browserAction.setIcon({
       path: "assets/badge-indicator-on.svg",
     });
-    browser.browserAction.setTitle({ title: "Chrome Mask is on." });
+    browser.browserAction.setTitle({
+      title: browser.i18n.getMessage("maskStatusOn"),
+    });
   } else {
     browser.browserAction.setIcon({
       path: "assets/badge-indicator-off.svg",
     });
-    browser.browserAction.setTitle({ title: "Chrome Mask is off." });
+    browser.browserAction.setTitle({
+      title: browser.i18n.getMessage("maskStatusOff"),
+    });
   }
 }
 

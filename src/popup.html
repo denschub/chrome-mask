@@ -8,7 +8,7 @@
     <script src="popup.js"></script>
   </head>
   <body>
-    <h2 id="headline">The mask is off. I look like Firefox to this site.</h2>
+    <h2 id="maskStatus">The mask is off. I look like Firefox to this site.</h2>
     <section class="fancy_toggle_container">
       <label class="fancy_toggle" for="mask_enabled">
         <input name="mask_enabled" type="checkbox" id="mask_enabled" />
@@ -16,19 +16,6 @@
       </label>
     </section>
     <hr />
-    <p>
-      If this site isn't working in Firefox without the mask, but perfectly fine with it, please report that to Mozilla!
-      You can report it
-      <a id="webcompat_link" href="https://webcompat.com/issues/new" target="_blank"
-        >completely anonymously on WebCompat.com</a
-      >, or
-      <a
-        id="bugzilla_link"
-        href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Web+Compatibility&component=Site+Reports"
-        target="_blank"
-        >on Bugzilla</a
-      >
-      if you have an account. Thank you! &hearts;
-    </p>
+    <p id="reportBrokenSite"></p>
   </body>
 </html>

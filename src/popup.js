@@ -12,27 +12,35 @@ async function getActiveTab() {
 async function updateUiState() {
   const activeTab = await getActiveTab();
   const currentHostname = new URL(activeTab.url).hostname;
-
-  const headline = document.getElementById("headline");
+  const maskStatus = document.getElementById("maskStatus");
   const checkbox = document.getElementById("mask_enabled");
-  const webcompatLink = document.getElementById("webcompat_link");
-  const bugzillaLink = document.getElementById("bugzilla_link");
+  const webcompatLink = document.createElement("a");
+  const bugzillaLink = document.createElement("a");
+  const reportBrokenSite = document.getElementById("reportBrokenSite");
 
   if (enabledHostnames.contains(currentHostname)) {
-    headline.innerText = "The mask is on! I pretend to be Chrome on this site.";
+    maskStatus.innerText = browser.i18n.getMessage("maskStatusOn");
     checkbox.checked = true;
   } else {
-    headline.innerText = "The mask is off. I look like Firefox to this site.";
+    maskStatus.innerText = browser.i18n.getMessage("maskStatusOff");
     checkbox.checked = false;
   }
 
   webcompatLink.href = linkWithSearch("https://webcompat.com/issues/new", [["url", activeTab.url]]);
+  webcompatLink.innerText = browser.i18n.getMessage("webcompatLinkText");
+
   bugzillaLink.href = linkWithSearch("https://bugzilla.mozilla.org/enter_bug.cgi", [
     ["bug_file_loc", activeTab.url],
     ["component", "Site Reports"],
     ["product", "Web Compatibility"],
     ["short_desc", `${currentHostname} - Site needs Chrome UA spoof`],
     ["status_whiteboard", "[webcompat-source:chrome-mask-extension]"],
+  ]);
+  bugzillaLink.innerText = browser.i18n.getMessage("bugzillaLinkText");
+
+  reportBrokenSite.innerHTML = browser.i18n.getMessage("reportBrokenSite", [
+    webcompatLink.outerHTML,
+    bugzillaLink.outerHTML,
   ]);
 }
 
