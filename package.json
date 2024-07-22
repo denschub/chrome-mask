@@ -8,9 +8,11 @@
   "type": "module",
   "scripts": {
     "build": "npx web-ext build -s src/ -a dist/",
+    "lint-check": "npx prettier --check .",
     "lint": "npx prettier --write .",
     "start": "npx web-ext run --devtools -s src/ -u https://duckduckgo.com/?q=user+agent",
-    "version-number-update": "node version_number_updater/main.js"
+    "version-number-update": "node version_number_updater/main.js",
+    "webext-lint": "npx web-ext lint -s src/"
   },
   "devDependencies": {
     "prettier": "3.3.2",
