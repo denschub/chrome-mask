@@ -1,0 +1,37 @@
+{
+  "extensionName": {
+    "message": "Chrome Mask"
+  },
+
+  "extensionDescription": {
+    "message": "Zieht Firefox eine Chrome-Maske auf, für Webseiten die sonst nicht funktionieren."
+  },
+
+  "reportBrokenSite": {
+    "message": "Wenn diese Seite ohne die Maske nicht funktioniert, aber mit Maske schon, bitte melde das Mozilla! Du kannst das $WEBCOMPAT$, oder auf $BUGZILLA$ falls Du einen Account hast. Dankeschön! &hearts;",
+    "placeholders": {
+      "WEBCOMPAT": {
+        "content": "$1"
+      },
+      "BUGZILLA": {
+        "content": "$2"
+      }
+    }
+  },
+
+  "webcompatLinkText": {
+    "message": "komplett anonym auf WebCompat.com melden"
+  },
+
+  "bugzillaLinkText": {
+    "message": "auf Bugzilla"
+  },
+
+  "maskStatusOn": {
+    "message": "Die Maske ist aktiv! Ich tarne mich als Chrome."
+  },
+
+  "maskStatusOff": {
+    "message": "Die Maske ist inaktiv! Die Seite sieht mich als Firefox."
+  }
+}
