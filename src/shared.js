@@ -97,6 +97,15 @@ class ChromeUAStringManager {
       currentChromeVersion = storedMajorVersion;
     }
 
+    let targetPlatform = this.#currentPlatform;
+
+    // On Linux, we actually spoof as Chrome-on-Windows. Some sites block Linux
+    // specifically, so this is one general way to get around that. We can
+    // narrow it durn further for the in-product intervention if needed.
+    if (targetPlatform == "linux") {
+      targetPlatform = "win";
+    }
+
     const ChromeUAStrings = {
       win: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/${currentChromeVersion}.0.0.0 Safari/537.36`,
       mac: `Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/${currentChromeVersion}.0.0.0 Safari/537.36`,
@@ -104,7 +113,7 @@ class ChromeUAStringManager {
       android: `Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/${currentChromeVersion}.0.0.0 Mobile Safari/537.36`,
     };
 
-    this.#currentUAString = ChromeUAStrings[this.#currentPlatform];
+    this.#currentUAString = ChromeUAStrings[targetPlatform];
   }
 
   async maybeRefreshRemote() {
