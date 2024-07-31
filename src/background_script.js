@@ -38,7 +38,7 @@ async function contentScriptSetup() {
   setupOnBeforeSendHeaders();
 
   const changedHostnames = [...hostsToAdd, ...hostsToRemove];
-  const affectedTabs = await browser.tabs.query({ url: matchPatternsForHostnames(changedHostnames) });
+  const affectedTabs = await browser.tabs.query({ url: matchPatternsForHostnames(changedHostnames), active: true });
   for (const tab of affectedTabs) {
     browser.tabs.reload(tab.id, { bypassCache: true });
   }
