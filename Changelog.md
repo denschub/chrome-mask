@@ -1,3 +1,7 @@
+# 4.2.0
+
+If you had more than one Firefox window open, the addon previously showed the wrong state icon in some windows, so it looked like the Chrome Mask was enabled when it was not. This bug is now fixed, so all status badges should be correct!
+
 # 4.1.0
 
 Originally, the addon loaded _all_ tabs with the same hostname if you flipped the switch. For people with too many tabs open, this could have presented a.. uhm.. problem. Now, only the currently selected tabs get reloaded. Thank you [@SuperTux88](https://github.com/SuperTux88) for the report and the PR!
