@@ -71,34 +71,20 @@ function setupOnBeforeSendHeaders() {
 }
 
 function updateBadgeStatus(currentTab) {
-  const currentHostname = new URL(currentTab.url).hostname;
-  const urls = [...enabledHostnames.get_values()];
+  if (currentTab.id != browser.tabs.TAB_ID_NONE) {
+    const currentHostname = new URL(currentTab.url).hostname;
+    const urls = [...enabledHostnames.get_values()];
 
-  if (urls.includes(currentHostname)) {
+    const isOn = urls.includes(currentHostname);
     browser.browserAction.setIcon({
-      path: "assets/badge-indicator-on.svg",
+      tabId: currentTab.id,
+      path: `assets/badge-indicator-${isOn ? "on" : "off"}.svg`,
     });
     browser.browserAction.setTitle({
-      title: browser.i18n.getMessage("maskStatusOn"),
-    });
-  } else {
-    browser.browserAction.setIcon({
-      path: "assets/badge-indicator-off.svg",
-    });
-    browser.browserAction.setTitle({
-      title: browser.i18n.getMessage("maskStatusOff"),
+      tabId: currentTab.id,
+      title: browser.i18n.getMessage(`maskStatus${isOn ? "On" : "Off"}`),
     });
   }
-}
-
-async function handleTabActived(activeInfo) {
-  const currentTab = await browser.tabs.get(activeInfo.tabId);
-  updateBadgeStatus(currentTab);
-}
-
-async function handleTabUpdated(tabId, changeInfo, tabInfo) {
-  const currentTab = await browser.tabs.get(tabId);
-  updateBadgeStatus(currentTab);
 }
 
 async function init() {
@@ -112,8 +98,10 @@ async function init() {
     }
   });
 
-  browser.tabs.onActivated.addListener(handleTabActived);
-  browser.tabs.onUpdated.addListener(handleTabUpdated);
+  browser.tabs.onUpdated.addListener(async (tabId, _changeInfo, _tabInfo) => {
+    const currentTab = await browser.tabs.get(tabId);
+    updateBadgeStatus(currentTab);
+  });
 
   await chromeUAStringManager.init();
   await contentScriptSetup();
