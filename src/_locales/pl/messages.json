@@ -1,0 +1,37 @@
+{
+  "extensionName": {
+    "message": "Chrome Mask"
+  },
+
+  "extensionDescription": {
+    "message": "Sprawia, że Firefox przyjmuje maskę, aby wyglądać jak Chrome dla stron internetowych, które w przeciwnym razie nie będą działać."
+  },
+
+  "reportBrokenSite": {
+    "message": "Jeśli ta strona nie działa w Firefoksie bez maski, ale doskonale z nią, zgłoś to Mozilli! Możesz to zgłosić $WEBCOMPAT$ lub $BUGZILLA$, jeśli masz konto. Dziękujemy! &hearts;",
+    "placeholders": {
+      "WEBCOMPAT": {
+        "content": "$1"
+      },
+      "BUGZILLA": {
+        "content": "$2"
+      }
+    }
+  },
+
+  "webcompatLinkText": {
+    "message": "całkowicie anonimowo na WebCompat.com"
+  },
+
+  "bugzillaLinkText": {
+    "message": "na Bugzilla"
+  },
+
+  "maskStatusOn": {
+    "message": "Maska jest włączona! Na tej stronie udaję Chrome."
+  },
+
+  "maskStatusOff": {
+    "message": "Maska jest wyłączona. Na tej stronie wyglądam jak Firefox."
+  }
+}
