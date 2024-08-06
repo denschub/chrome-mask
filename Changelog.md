@@ -1,3 +1,7 @@
+# 4.3.0 (unreleased)
+
+- The addon is now available in Polish! Thank you [@damblor](https://github.com/damblor) for the help!
+
 # 4.2.0
 
 If you had more than one Firefox window open, the addon previously showed the wrong state icon in some windows, so it looked like the Chrome Mask was enabled when it was not. This bug is now fixed, so all status badges should be correct!
