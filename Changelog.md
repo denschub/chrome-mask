@@ -1,6 +1,7 @@
 # 4.3.0 (unreleased)
 
 - The addon is now available in Polish! Thank you [@damblor](https://github.com/damblor) for the help!
+- There was a bug where the default on-hover title for the button was wrong. That bug was fixed by [@dannycolin](https://github.com/dannycolin)!
 
 # 4.2.0
 
