@@ -11,14 +11,20 @@ async function getActiveTab() {
 
 async function updateUiState() {
   const activeTab = await getActiveTab();
-  const currentHostname = new URL(activeTab.url).hostname;
+  const currentUrl = new URL(activeTab.url);
+  const currentProtocol = currentUrl.protocol;
+  const currentHostname = currentUrl.hostname;
   const maskStatus = document.getElementById("maskStatus");
+  const fancyContainer = document.querySelector("section.fancy_toggle_container");
   const checkbox = document.getElementById("mask_enabled");
   const webcompatLink = document.createElement("a");
   const bugzillaLink = document.createElement("a");
   const reportBrokenSite = document.getElementById("reportBrokenSite");
 
-  if (enabledHostnames.contains(currentHostname)) {
+  if (currentProtocol == "moz-extension:" || currentHostname == "") {
+    maskStatus.innerText = browser.i18n.getMessage("maskStatusUnsupported");
+    fancyContainer.style.display = "none";
+  } else if (enabledHostnames.contains(currentHostname)) {
     maskStatus.innerText = browser.i18n.getMessage("maskStatusOn");
     checkbox.checked = true;
   } else {

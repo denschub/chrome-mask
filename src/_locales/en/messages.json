@@ -33,5 +33,9 @@
 
   "maskStatusOff": {
     "message": "The mask is off. I look like Firefox to this site."
+  },
+
+  "maskStatusUnsupported": {
+    "message": "The mask cannot work on this site."
   }
 }
