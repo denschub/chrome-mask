@@ -2,6 +2,7 @@
 
 - The addon is now available in Polish! Thank you [@damblor](https://github.com/damblor) for the help!
 - There was a bug where the default on-hover title for the button was wrong. That bug was fixed by [@dannycolin](https://github.com/dannycolin)!
+- The addon claimed it could work on `about:` and `moz-extension://` pages, which it could not. The UI has been adjusted to handle this case. Thanks for the contribution, [@changhuapeng](https://github.com/changhuapeng)!
 
 # 4.2.0
 
