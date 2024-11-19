@@ -1,0 +1,30 @@
+:root {
+  --background-color: #42414c;
+  --border-color: #717079;
+  --color: #fff;
+  --background-alternate-color: #5f5e68;
+
+  @media (prefers-color-scheme: light) {
+    --background-color: #fff;
+    --border-color: #c4c4c5;
+    --color: #15141a;
+    --toggle-background: #e2e2e3;
+  }
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--color);
+  font-family: sans-serif;
+  padding: 0 0.5rem;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  padding: 4px;
+}
