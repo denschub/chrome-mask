@@ -1,0 +1,35 @@
+:root {
+  --background-color: #42414c;
+  --border-color: #717079;
+  --color: #fff;
+  --background-alternate-color: #5f5e68;
+
+  @media (prefers-color-scheme: light) {
+    --background-color: #fff;
+    --border-color: #c4c4c5;
+    --color: #15141a;
+    --toggle-background: #e2e2e3;
+  }
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--color);
+  font-family: sans-serif;
+  padding: 0 0.5rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+}
+
+p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+ul {
+  margin: 0.5rem 2rem;
+  padding: 0;
+}
