@@ -37,5 +37,17 @@
 
   "maskStatusUnsupported": {
     "message": "The mask cannot work on this site."
+  },
+
+  "siteListTitle": {
+    "message": "Site List"
+  },
+
+  "siteListDescription": {
+    "message": "This is a list of websites where the mask is enabled."
+  },
+
+  "siteListEmpty": {
+    "message": "Your list is empty."
   }
 }

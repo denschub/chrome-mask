@@ -31,5 +31,8 @@
   },
   "background": {
     "scripts": ["shared.js", "background_script.js"]
+  },
+  "options_ui": {
+    "page": "options.html"
   }
 }
