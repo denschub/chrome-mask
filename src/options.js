@@ -2,6 +2,11 @@ const enabledHostnames = new EnabledHostnamesList();
 
 async function updateUiState() {
   const siteList = document.getElementById("site-list");
+  const siteListTitle = document.getElementById("site-list-title");
+  const siteListDescription = document.getElementById("site-list-description");
+
+  siteListTitle.innerText = browser.i18n.getMessage("siteListTitle");
+  siteListDescription.innerText = browser.i18n.getMessage("siteListDescription");
 
   if (enabledHostnames.size() > 0) {
     enabledHostnames.get_values().forEach(hostname => {
@@ -10,8 +15,8 @@ async function updateUiState() {
       siteList.appendChild(siteListItem);
     });
   } else {
-    const siteListItem = document.createElement("li");
-    siteListItem.textContent = "Your list is empty.";
+    const siteListItem = document.createElement("p");
+    siteListItem.innerText = browser.i18n.getMessage("siteListEmpty");
     siteList.appendChild(siteListItem);
   }
 }
