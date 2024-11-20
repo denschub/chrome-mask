@@ -19,12 +19,17 @@ body {
   padding: 0 0.5rem;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+h2 {
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
 }
 
-ul li {
-  padding: 4px;
+p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+ul {
+  margin: 0.5rem 2rem;
+  padding: 0;
 }
