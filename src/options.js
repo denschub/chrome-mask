@@ -9,7 +9,7 @@ async function updateUiState() {
   siteListDescription.innerText = browser.i18n.getMessage("siteListDescription");
 
   if (enabledHostnames.size() > 0) {
-    enabledHostnames.get_values().forEach(hostname => {
+    enabledHostnames.get_values().forEach((hostname) => {
       const siteListItem = document.createElement("li");
       siteListItem.textContent = hostname;
       siteList.appendChild(siteListItem);
