@@ -7,6 +7,10 @@
     "message": "Makes Firefox wear a mask to look like Chrome to websites that otherwise won't work."
   },
 
+  "breakageWarning": {
+    "message": "Please only use Chrome Mask on sites that show you a \"Firefox is not supported\" message. Using it on other sites might break things in unexpected ways."
+  },
+
   "reportBrokenSite": {
     "message": "If this site isn't working in Firefox without the mask, but perfectly fine with it, please report that to Mozilla! You can report it $WEBCOMPAT$, or $BUGZILLA$ if you have an account. Thank you! &hearts;",
     "placeholders": {

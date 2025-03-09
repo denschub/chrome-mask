@@ -19,6 +19,7 @@ async function updateUiState() {
   const checkbox = document.getElementById("mask_enabled");
   const webcompatLink = document.createElement("a");
   const bugzillaLink = document.createElement("a");
+  const breakageWarning = document.getElementById("breakageWarning");
   const reportBrokenSite = document.getElementById("reportBrokenSite");
 
   if (currentProtocol == "moz-extension:" || currentHostname == "") {
@@ -43,6 +44,8 @@ async function updateUiState() {
     ["status_whiteboard", "[webcompat-source:chrome-mask-extension]"],
   ]);
   bugzillaLink.innerText = browser.i18n.getMessage("bugzillaLinkText");
+
+  breakageWarning.innerText = browser.i18n.getMessage("breakageWarning");
 
   reportBrokenSite.innerHTML = browser.i18n.getMessage("reportBrokenSite", [
     webcompatLink.outerHTML,
