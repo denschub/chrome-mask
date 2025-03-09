@@ -1,21 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: sans-serif;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1rem 2rem;
 }
 
 h2 {
   font-size: 1.3rem;
-  margin: 0.5rem 0;
+  margin: 1.5rem 0 0.5rem;
 }
 
+p {
+  line-height: 1.5rem;
+}
+
+#add-site-form,
 .site-list-item {
   display: grid;
+  gap: 1rem;
   grid-template-columns: 1fr min-content;
   margin-top: 1rem;
 
-  p {
+  p,
+  button,
+  input {
     font-size: 1rem;
     line-height: 2.5rem;
     margin: 0;
+  }
+
+  button,
+  input {
+    padding: 0 0.5rem;
   }
 }
