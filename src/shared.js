@@ -67,7 +67,7 @@ class ChromeUAStringManager {
 
   // This are just fallbacks in the case we somehow have to make a request before everything is loaded.
   #currentPlatform = "win";
-  #currentUAString = `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36`;
+  #currentUAString = `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36`;
 
   async init() {
     const platformInfo = await browser.runtime.getPlatformInfo();
@@ -89,7 +89,7 @@ class ChromeUAStringManager {
   }
 
   async buildUAStringFromStorage() {
-    let currentChromeVersion = "126";
+    let currentChromeVersion = "134";
 
     const storedMajorVersion = (await browser.storage.local.get("remoteStorageVersionNumber"))
       ?.remoteStorageVersionNumber?.version;
