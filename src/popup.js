@@ -48,6 +48,24 @@ async function updateUiState() {
     webcompatLink.outerHTML,
     bugzillaLink.outerHTML,
   ]);
+
+  // Annoyingly, on Android, `browser.runtime.openOptionsPage` is fundamentally
+  // broken. For this to be viable, I'd need two bugs fixed:
+  //   - https://bugzilla.mozilla.org/show_bug.cgi?id=1795449
+  //   - https://bugzilla.mozilla.org/show_bug.cgi?id=1884550
+  // So for now, just display a fallback text for Android... :(
+  const platformInfo = await browser.runtime.getPlatformInfo();
+  if (platformInfo.os == "android") {
+    document.getElementById("manageSites").style.display = "none";
+    document.getElementById("manageSitesFallbackText").innerText = browser.i18n.getMessage("manageSitesFallback");
+    document.getElementById("manageSitesFallback").style.display = "block";
+  } else {
+    const manageSitesButton = document.getElementById("manageSitesButton");
+    manageSitesButton.innerText = browser.i18n.getMessage("manageSitesButton");
+    manageSitesButton.addEventListener("click", async () => {
+      await browser.runtime.openOptionsPage();
+    });
+  }
 }
 
 function linkWithSearch(base, searchParamsInit) {

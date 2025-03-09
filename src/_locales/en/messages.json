@@ -39,6 +39,14 @@
     "message": "The mask cannot work on this site."
   },
 
+  "manageSitesButton": {
+    "message": "Add or remove sites"
+  },
+
+  "manageSitesFallback": {
+    "message": "To add or remove sites, please open the Extension Manager, select Chrome Mask, and hit Settings."
+  },
+
   "addSiteTitle": {
     "message": "Add Site"
   },
