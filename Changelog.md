@@ -1,3 +1,7 @@
+# 5.0.0 (unreleased)
+
+- Added a settings UI to add or remove sites from Chrome Mask without being on that site. Thanks to [@dannycolin](https://github.com/dannycolin) for the initial prototype here.
+
 # 4.3.0
 
 - The addon is now available in Polish! Thank you [@damblor](https://github.com/damblor) for the help!
