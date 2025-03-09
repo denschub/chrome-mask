@@ -39,15 +39,15 @@
     "message": "The mask cannot work on this site."
   },
 
-  "siteListTitle": {
-    "message": "Site List"
+  "maskedSitesTitle": {
+    "message": "Currently Masked Sites"
   },
 
-  "siteListDescription": {
-    "message": "This is a list of websites where the mask is enabled."
+  "siteListRemoveButton": {
+    "message": "Remove"
   },
 
   "siteListEmpty": {
-    "message": "Your list is empty."
+    "message": "You did not enable Chrome Mask on any site yet!"
   }
 }
