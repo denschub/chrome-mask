@@ -60,6 +60,10 @@ class EnabledHostnamesList {
   get_values() {
     return this.#set.values();
   }
+
+  size() {
+    return this.#set.size;
+  }
 }
 
 class ChromeUAStringManager {

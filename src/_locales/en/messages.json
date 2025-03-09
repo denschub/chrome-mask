@@ -37,5 +37,45 @@
 
   "maskStatusUnsupported": {
     "message": "The mask cannot work on this site."
+  },
+
+  "manageSitesButton": {
+    "message": "Add or remove sites"
+  },
+
+  "manageSitesFallback": {
+    "message": "To add or remove sites, please open the Extension Manager, select Chrome Mask, and hit Settings."
+  },
+
+  "addSiteTitle": {
+    "message": "Add Site"
+  },
+
+  "addSiteButton": {
+    "message": "Add Site"
+  },
+
+  "addSiteHostnameExplanation": {
+    "message": "Note: Always enter the full domain name. If you enter example.com, Chrome Mask will not be active on www.example.com!"
+  },
+
+  "addSiteErrorInvalid": {
+    "message": "Please enter a valid domain!"
+  },
+
+  "addSiteErrorAlreadyActive": {
+    "message": "Chrome Mask is already enabled for this domain!"
+  },
+
+  "maskedSitesTitle": {
+    "message": "Currently Masked Sites"
+  },
+
+  "siteListRemoveButton": {
+    "message": "Remove"
+  },
+
+  "siteListEmpty": {
+    "message": "You did not enable Chrome Mask on any site yet!"
   }
 }
