@@ -7,6 +7,10 @@
     "message": "Zieht Firefox eine Chrome-Maske auf, für Webseiten die sonst nicht funktionieren."
   },
 
+  "breakageWarning": {
+    "message": "Bitte verwende die Chrome-Maske nur auf Seiten, die einen \"Firefox wird nicht unterstützt\"-Hinweis anzeigen. Auf anderen Seiten könnten Dinge auf überraschende Weisen kaputt gehen."
+  },
+
   "reportBrokenSite": {
     "message": "Wenn diese Seite ohne die Maske nicht funktioniert, aber mit Maske schon, bitte melde das Mozilla! Du kannst das $WEBCOMPAT$, oder auf $BUGZILLA$ falls Du einen Account hast. Dankeschön! &hearts;",
     "placeholders": {
@@ -37,5 +41,45 @@
 
   "maskStatusUnsupported": {
     "message": "Die Maske kann auf dieser Seite nicht funktionieren."
+  },
+
+  "manageSitesButton": {
+    "message": "Seiten hinzufügen oder entfernen"
+  },
+
+  "manageSitesFallback": {
+    "message": "Um Seiten hinzuzufügen oder zu entfernen, benutze bitte den Extension Manager, wähle dort Chrome Mask aus, und öffne dann die Einstellungen."
+  },
+
+  "addSiteTitle": {
+    "message": "Hinzufügen"
+  },
+
+  "addSiteButton": {
+    "message": "Hinzufügen"
+  },
+
+  "addSiteHostnameExplanation": {
+    "message": "Hinweis: Bitte gib immer die volle Domain an. Wenn du example.com angibst, wird die Chrome-Maske auf www.example.com nicht aktiv sein!"
+  },
+
+  "addSiteErrorInvalid": {
+    "message": "Bitte gib eine valide Domain an!"
+  },
+
+  "addSiteErrorAlreadyActive": {
+    "message": "Die Chrome-Maske ist auf dieser Seite bereits aktiv!"
+  },
+
+  "maskedSitesTitle": {
+    "message": "Gerade maskierte Seiten"
+  },
+
+  "siteListRemoveButton": {
+    "message": "Entfernen"
+  },
+
+  "siteListEmpty": {
+    "message": "Die Chrome-Maske ist noch auf keiner Seite aktiv!"
   }
 }
