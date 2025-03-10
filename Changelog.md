@@ -1,4 +1,4 @@
-# 5.0.0 (unreleased)
+# 5.0.0
 
 - Added a settings UI to add or remove sites from Chrome Mask without being on that site. Thanks to [@dannycolin](https://github.com/dannycolin) for the initial prototype here.
 - Added an explicit warning to only use Chrome Mask on sites that claim "Firefox is not supported", because using it on other sites will break things.
