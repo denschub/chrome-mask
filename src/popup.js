@@ -17,8 +17,8 @@ async function updateUiState() {
   const maskStatus = document.getElementById("maskStatus");
   const fancyContainer = document.querySelector("section.fancy_toggle_container");
   const checkbox = document.getElementById("mask_enabled");
+  const inProductReporterLink = document.createElement("a");
   const webcompatLink = document.createElement("a");
-  const bugzillaLink = document.createElement("a");
   const breakageWarning = document.getElementById("breakageWarning");
   const reportBrokenSite = document.getElementById("reportBrokenSite");
 
@@ -33,23 +33,17 @@ async function updateUiState() {
     checkbox.checked = false;
   }
 
+  inProductReporterLink.href = "https://support.mozilla.org/kb/report-breakage-due-blocking";
+  inProductReporterLink.innerText = browser.i18n.getMessage("inProductReporterLinkText");
+
   webcompatLink.href = linkWithSearch("https://webcompat.com/issues/new", [["url", activeTab.url]]);
   webcompatLink.innerText = browser.i18n.getMessage("webcompatLinkText");
-
-  bugzillaLink.href = linkWithSearch("https://bugzilla.mozilla.org/enter_bug.cgi", [
-    ["bug_file_loc", activeTab.url],
-    ["component", "Site Reports"],
-    ["product", "Web Compatibility"],
-    ["short_desc", `${currentHostname} - Site needs Chrome UA spoof`],
-    ["status_whiteboard", "[webcompat-source:chrome-mask-extension]"],
-  ]);
-  bugzillaLink.innerText = browser.i18n.getMessage("bugzillaLinkText");
 
   breakageWarning.innerText = browser.i18n.getMessage("breakageWarning");
 
   reportBrokenSite.innerHTML = browser.i18n.getMessage("reportBrokenSite", [
+    inProductReporterLink.outerHTML,
     webcompatLink.outerHTML,
-    bugzillaLink.outerHTML,
   ]);
 
   // Annoyingly, on Android, `browser.runtime.openOptionsPage` is fundamentally

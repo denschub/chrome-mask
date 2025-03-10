@@ -8,27 +8,27 @@
   },
 
   "breakageWarning": {
-    "message": "Please only use Chrome Mask on sites that show you a \"Firefox is not supported\" message. Using it on other sites might break things in unexpected ways."
+    "message": "While Chrome Mask may help if you see a \"Browser unsupported\" message, it could cause unexpected breakage on some sites."
   },
 
   "reportBrokenSite": {
-    "message": "If this site isn't working in Firefox without the mask, but perfectly fine with it, please report that to Mozilla! You can report it $WEBCOMPAT$, or $BUGZILLA$ if you have an account. Thank you! &hearts;",
+    "message": "If you find a site which works better with Chrome Mask enabled, please report it $IN_PRODUCT_REPORTER$ or $WEBCOMPAT$. Thank you! &hearts;",
     "placeholders": {
-      "WEBCOMPAT": {
+      "IN_PRODUCT_REPORTER": {
         "content": "$1"
       },
-      "BUGZILLA": {
+      "WEBCOMPAT": {
         "content": "$2"
       }
     }
   },
 
-  "webcompatLinkText": {
-    "message": "completely anonymously on WebCompat.com"
+  "inProductReporterLinkText": {
+    "message": "using the \"Report broken site\" feature"
   },
 
-  "bugzillaLinkText": {
-    "message": "on Bugzilla"
+  "webcompatLinkText": {
+    "message": "on WebCompat.com"
   },
 
   "maskStatusOn": {

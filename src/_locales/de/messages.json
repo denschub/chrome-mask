@@ -8,27 +8,27 @@
   },
 
   "breakageWarning": {
-    "message": "Bitte verwende die Chrome-Maske nur auf Seiten, die einen \"Firefox wird nicht unterstützt\"-Hinweis anzeigen. Auf anderen Seiten könnten Dinge auf überraschende Weisen kaputt gehen."
+    "message": "Die Chrome-Maske kann helfen wenn du eine \"Browser nicht unterstüzt\"-Warnung siehst, aber sie kann auch unerwartete Probleme auf manchen Seiten auslösen."
   },
 
   "reportBrokenSite": {
-    "message": "Wenn diese Seite ohne die Maske nicht funktioniert, aber mit Maske schon, bitte melde das Mozilla! Du kannst das $WEBCOMPAT$, oder auf $BUGZILLA$ falls Du einen Account hast. Dankeschön! &hearts;",
+    "message": "Wenn du eine Seite findest, die mit Chrome-Maske besser funktioniert als ohne, melde das bitte $IN_PRODUCT_REPORTER$ oder $WEBCOMPAT$. Dankeschön! &hearts;",
     "placeholders": {
-      "WEBCOMPAT": {
+      "IN_PRODUCT_REPORTER": {
         "content": "$1"
       },
-      "BUGZILLA": {
+      "WEBCOMPAT": {
         "content": "$2"
       }
     }
   },
 
-  "webcompatLinkText": {
-    "message": "komplett anonym auf WebCompat.com melden"
+  "inProductReporterLinkText": {
+    "message": "mit der \"Problem mit Website melden\"-Funktion"
   },
 
-  "bugzillaLinkText": {
-    "message": "auf Bugzilla"
+  "webcompatLinkText": {
+    "message": "auf WebCompat.com"
   },
 
   "maskStatusOn": {
