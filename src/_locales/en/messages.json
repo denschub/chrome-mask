@@ -81,5 +81,20 @@
 
   "siteListEmpty": {
     "message": "You did not enable Chrome Mask on any site yet!"
+  },
+  "shortcutsTitle": {
+    "message": "Keyboard Shortcuts"
+  },
+  "shortcutsDescription": {
+    "message": "To modify the default keyboard shortcuts:"
+  },
+  "shortcutsOpenPanelButton": {
+    "message": "Open Keyboard Shorcut Settings"
+  },
+  "shortcutsCommandCombo": {
+    "message": "Command"
+  },
+  "shortcutsCommandDescription": {
+    "message": "Description"
   }
 }
