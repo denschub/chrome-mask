@@ -13,6 +13,7 @@ async function initUi() {
 
   setupAddForm();
   setupSiteList();
+  setupKeyboardShortcuts();
 }
 
 function tryValidateHostname(input) {
@@ -79,6 +80,51 @@ function setupSiteList() {
       siteListItem.append(hostnameLabel, deleteButton);
       siteList.appendChild(siteListItem);
     });
+}
+
+async function setupKeyboardShortcuts() {
+  const platformInfo = await browser.runtime.getPlatformInfo();
+  if (platformInfo.os == "android") return;
+
+  const shortcutsTitle = document.getElementById("shortcuts-title");
+  shortcutsTitle.textContent = browser.i18n.getMessage("shortcutsTitle");
+
+  const shortcutsCommandCombo = document.getElementById("shortcuts-command-combo");
+  shortcutsCommandCombo.textContent = browser.i18n.getMessage("shortcutsCommandCombo");
+
+  const shortcutsCommandDescription = document.getElementById("shortcuts-command-description");
+  shortcutsCommandDescription.textContent = browser.i18n.getMessage("shortcutsCommandDescription");
+
+  const shortcutsCommandList = document.getElementById("shortcuts-command-list");
+  const browserCommands = await browser.commands.getAll();
+  browserCommands.forEach((browserCommand) => {
+    const shortcutsCommandRow = document.createElement("tr");
+
+    const shortcutsCommandItemShortcut = document.createElement("td");
+    shortcutsCommandItemShortcut.textContent =
+      browserCommand.shortcut || browser.i18n.getMessage("shortcutsCommandItemShortcutUndefined");
+
+    const shortcutsCommandItemDescription = document.createElement("td");
+    shortcutsCommandItemDescription.textContent = browserCommand.description;
+
+    shortcutsCommandRow.append(shortcutsCommandItemShortcut, shortcutsCommandItemDescription);
+    shortcutsCommandList.appendChild(shortcutsCommandRow);
+  });
+
+  const browserInfo = await browser.runtime.getBrowserInfo();
+  const browserVersion = browserInfo.version.split(".")[0];
+
+  if (browserVersion >= 137) {
+    const shortcutsOpenPanelButton = document.getElementById("shortcuts-open-panel-button");
+    shortcutsOpenPanelButton.textContent = browser.i18n.getMessage("shortcutsOpenPanelButton");
+    shortcutsOpenPanelButton.addEventListener("click", async () => {
+      await browser.commands.openShortcutSettings();
+    });
+    shortcutsOpenPanelButton.style.display = "block";
+  }
+
+  const shortcutsSection = document.getElementById("shortcuts-section");
+  shortcutsSection.style.display = "block";
 }
 
 document.addEventListener("DOMContentLoaded", async () => {

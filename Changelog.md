@@ -1,3 +1,7 @@
+# 7.0.0 (unreleased)
+
+- Adds support for an optional keyboard shortcut to toggle Chrome Mask. Thank you very much, [@dannycolin](https://github.com/dannycolin)!
+
 # 6.0.0
 
 - The addon now spoofs `navigator.appVersion` to match what Chrome is doing.

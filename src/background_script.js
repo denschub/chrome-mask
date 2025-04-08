@@ -87,6 +87,16 @@ function updateBadgeStatus(currentTab) {
   }
 }
 
+async function toggleMask(tab) {
+  const currentHostname = new URL(tab.url).hostname;
+
+  if (enabledHostnames.contains(currentHostname)) {
+    await enabledHostnames.remove(currentHostname);
+  } else {
+    await enabledHostnames.add(currentHostname);
+  }
+}
+
 async function init() {
   browser.runtime.onMessage.addListener(async (msg) => {
     switch (msg.action) {
@@ -95,6 +105,16 @@ async function init() {
         break;
       default:
         throw new Error("unexpected message received", msg);
+    }
+  });
+
+  browser.commands.onCommand.addListener(async (command, tab) => {
+    switch (command) {
+      case "toggle_mask":
+        await toggleMask(tab);
+        await contentScriptSetup();
+        browser.tabs.reload(tab.id, { bypassCache: true });
+        break;
     }
   });
 

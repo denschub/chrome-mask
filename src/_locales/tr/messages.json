@@ -43,14 +43,6 @@
     "message": "Chrome Maskesi bu sitede desteklenmiyor."
   },
 
-  "manageSitesButton": {
-    "message": "Site ekle ya da kaldır"
-  },
-
-  "manageSitesFallback": {
-    "message": "Site ekleyip kaldırmak için lütfen Eklenti Yöneticisi'ni açın, Chrome Maskesi'ni seçin ve Ayarlar'a tıklayın."
-  },
-
   "addSiteTitle": {
     "message": "Site ekle"
   },

@@ -53,13 +53,13 @@ async function updateUiState() {
   // So for now, just display a fallback text for Android... :(
   const platformInfo = await browser.runtime.getPlatformInfo();
   if (platformInfo.os == "android") {
-    document.getElementById("manageSites").style.display = "none";
-    document.getElementById("manageSitesFallbackText").innerText = browser.i18n.getMessage("manageSitesFallback");
-    document.getElementById("manageSitesFallback").style.display = "block";
+    document.getElementById("preferences").style.display = "none";
+    document.getElementById("preferencesFallbackText").innerText = browser.i18n.getMessage("preferencesFallback");
+    document.getElementById("preferencesFallback").style.display = "block";
   } else {
-    const manageSitesButton = document.getElementById("manageSitesButton");
-    manageSitesButton.innerText = browser.i18n.getMessage("manageSitesButton");
-    manageSitesButton.addEventListener("click", async () => {
+    const preferencesButton = document.getElementById("preferencesButton");
+    preferencesButton.innerText = browser.i18n.getMessage("preferencesButton");
+    preferencesButton.addEventListener("click", async () => {
       await browser.runtime.openOptionsPage();
     });
   }

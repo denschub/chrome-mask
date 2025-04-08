@@ -44,14 +44,6 @@
     "message": "扩展无法在此网站上使用。"
   },
 
-  "manageSitesButton": {
-    "message": "添加或移除网站"
-  },
-
-  "manageSitesFallback": {
-    "message": "要添加或移除网站，请打开扩展管理器，选择Chrome Mask，然后点击设置。"
-  },
-
   "addSiteTitle": {
     "message": "增加网站"
   },

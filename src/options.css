@@ -16,6 +16,34 @@ p {
   line-height: 1.5rem;
 }
 
+button,
+input {
+  font-size: 1rem;
+  line-height: 2.5rem;
+  margin: 0;
+  padding: 0 0.5rem;
+}
+
+#shortcuts-table {
+  margin-block-end: 1rem;
+
+  table {
+    width: 100%;
+  }
+
+  th,
+  td {
+    line-height: 2rem;
+    padding: 0 0.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 2.5rem;
+    margin: 0;
+  }
+}
+
 #add-site-form,
 .site-list-item {
   display: grid;
@@ -23,16 +51,9 @@ p {
   grid-template-columns: 1fr min-content;
   margin-top: 1rem;
 
-  p,
-  button,
-  input {
+  p {
     font-size: 1rem;
     line-height: 2.5rem;
     margin: 0;
-  }
-
-  button,
-  input {
-    padding: 0 0.5rem;
   }
 }

@@ -43,12 +43,12 @@
     "message": "Le masque ne peut pas fonctionner sur ce site."
   },
 
-  "manageSitesButton": {
-    "message": "Ajouter ou supprimer des sites"
+  "preferencesButton": {
+    "message": "Préférences"
   },
 
-  "manageSitesFallback": {
-    "message": "Pour ajouter ou supprimer des sites, veuillez ouvrir le gestionnaire d'extensions, sélectionner Chrome Mask et appuyer sur Préfèrences."
+  "preferencesFallback": {
+    "message": "Pour modifier les préférences, veuillez ouvrir le gestionnaire d'extensions, sélectionner Chrome Mask et appuyer sur Préférences."
   },
 
   "addSiteTitle": {
@@ -81,5 +81,23 @@
 
   "siteListEmpty": {
     "message": "Vous n'avez pas encore activé Chrome Mask sur un site!"
+  },
+  "shortcutsTitle": {
+    "message": "Raccourcis clavier"
+  },
+  "shortcutsOpenPanelButton": {
+    "message": "Ouvrir le gestionnaire de raccourcis"
+  },
+  "shortcutsCommandCombo": {
+    "message": "Touches"
+  },
+  "shortcutsCommandDescription": {
+    "message": "Description"
+  },
+  "shortcutsCommandItemShortcutUndefined": {
+    "message": "Non défini"
+  },
+  "shortcutsToggleMask": {
+    "message": "Basculer le statut du masque pour le site actuel"
   }
 }

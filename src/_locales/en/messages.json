@@ -43,12 +43,12 @@
     "message": "The mask cannot work on this site."
   },
 
-  "manageSitesButton": {
-    "message": "Add or remove sites"
+  "preferencesButton": {
+    "message": "Preferences"
   },
 
-  "manageSitesFallback": {
-    "message": "To add or remove sites, please open the Extension Manager, select Chrome Mask, and hit Settings."
+  "preferencesFallback": {
+    "message": "To adjust preferences, please open the Extension Manager, select Chrome Mask, and hit Settings."
   },
 
   "addSiteTitle": {
@@ -81,5 +81,23 @@
 
   "siteListEmpty": {
     "message": "You did not enable Chrome Mask on any site yet!"
+  },
+  "shortcutsTitle": {
+    "message": "Keyboard Shortcuts"
+  },
+  "shortcutsOpenPanelButton": {
+    "message": "Open Keyboard Shortcut Settings"
+  },
+  "shortcutsCommandCombo": {
+    "message": "Keys"
+  },
+  "shortcutsCommandDescription": {
+    "message": "Description"
+  },
+  "shortcutsCommandItemShortcutUndefined": {
+    "message": "Undefined"
+  },
+  "shortcutsToggleMask": {
+    "message": "Toggle the mask for the current site"
   }
 }

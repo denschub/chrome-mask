@@ -43,14 +43,6 @@
     "message": "Die Maske kann auf dieser Seite nicht funktionieren."
   },
 
-  "manageSitesButton": {
-    "message": "Seiten hinzufügen oder entfernen"
-  },
-
-  "manageSitesFallback": {
-    "message": "Um Seiten hinzuzufügen oder zu entfernen, benutze bitte den Extension Manager, wähle dort Chrome Mask aus, und öffne dann die Einstellungen."
-  },
-
   "addSiteTitle": {
     "message": "Hinzufügen"
   },
