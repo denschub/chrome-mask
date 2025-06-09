@@ -1,3 +1,7 @@
+# 6.0.0
+
+- This addon is now available in Turkish (thank you, [@MemoKing34](https://github.com/MemoKing34)).
+
 # 5.0.0
 
 - Added a settings UI to add or remove sites from Chrome Mask without being on that site. Thanks to [@dannycolin](https://github.com/dannycolin) for the initial prototype here.

@@ -1,0 +1,85 @@
+{
+  "extensionName": {
+    "message": "Chrome Maskesi"
+  },
+
+  "extensionDescription": {
+    "message": "Firefox'a, başka türlü çalışmayan, websitelere Chrome gibi gözükmesi için maske giydirir."
+  },
+
+  "breakageWarning": {
+    "message": "Eğer \"Desteklenmeyen tarayıcı\" mesajı görüyorsanız Chrome Maskesi yardımcı olabilir ama bazı sitelerde beklenmeyen sorunlara yol açabilir."
+  },
+
+  "reportBrokenSite": {
+    "message": "Eğer Chrome Maskesi ile daha iyi çalışan bir site bulursan lütfen $IN_PRODUCT_REPORTER$ ya da $WEBCOMPAT$ bildirin. Teşekkür ederiz! &hearts;",
+    "placeholders": {
+      "IN_PRODUCT_REPORTER": {
+        "content": "$1"
+      },
+      "WEBCOMPAT": {
+        "content": "$2"
+      }
+    }
+  },
+
+  "inProductReporterLinkText": {
+    "message": "\"Bozuk site bildir\" özelliğini kullanarak"
+  },
+
+  "webcompatLinkText": {
+    "message": "WebCompat.com üzerinden"
+  },
+
+  "maskStatusOn": {
+    "message": "Maske açık! Bu sitede Chrome gibi davranmaya çalışacağım."
+  },
+
+  "maskStatusOff": {
+    "message": "Maske kapalı. Bu siteye Firefox olarak gözüküyorum."
+  },
+
+  "maskStatusUnsupported": {
+    "message": "Chrome Maskesi bu sitede desteklenmiyor."
+  },
+
+  "manageSitesButton": {
+    "message": "Site ekle ya da kaldır"
+  },
+
+  "manageSitesFallback": {
+    "message": "Site ekleyip kaldırmak için lütfen Eklenti Yöneticisi'ni açın, Chrome Maskesi'ni seçin ve Ayarlar'a tıklayın."
+  },
+
+  "addSiteTitle": {
+    "message": "Site ekle"
+  },
+
+  "addSiteButton": {
+    "message": "Ekle"
+  },
+
+  "addSiteHostnameExplanation": {
+    "message": "Not: Herzaman tam alan adını yazın. Eğer example.com yazarsanız Chrome Maskesi www.example.com da açılmayacaktır!"
+  },
+
+  "addSiteErrorInvalid": {
+    "message": "Lütfen geçerli bir alan adı girin!"
+  },
+
+  "addSiteErrorAlreadyActive": {
+    "message": "Chrome Maskesi bu alan adı için zaten aktif!"
+  },
+
+  "maskedSitesTitle": {
+    "message": "Halihazırda maskeli siteler"
+  },
+
+  "siteListRemoveButton": {
+    "message": "Kaldır"
+  },
+
+  "siteListEmpty": {
+    "message": "Daha herhangi bir sitede Chrome Maskesi'ni aktifleştirmedin!"
+  }
+}
