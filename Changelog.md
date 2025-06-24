@@ -1,6 +1,6 @@
 # 6.0.0
 
-- This addon is now available in Turkish (thank you, [@MemoKing34](https://github.com/MemoKing34)).
+- This addon is now available in Turkish (thank you, [@MemoKing34](https://github.com/MemoKing34)) and Simplified Chinese (thank you, [@AcideFluorhydrique](https://github.com/AcideFluorhydrique))!
 
 # 5.0.0
 

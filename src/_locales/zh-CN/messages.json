@@ -1,0 +1,86 @@
+{
+  "extensionName": {
+    "message": "Chrome Mask"
+  },
+
+  "extensionDescription": {
+    "message": "给您的火狐浏览器戴上“面具”，让它在那些不支持火狐的网站上看起来像谷歌Chrome，从而使网页正常显示。"
+  },
+
+  "breakageWarning": {
+    "message": "虽然Chrome Mask可以帮助您解决“浏览器不受支持”的问题，但是它也许会导致某些网站出现意外的故障。"
+  },
+
+  "reportBrokenSite": {
+    "message": "如果您发现某个网站在启用本扩展后才能正常显示，请向$IN_PRODUCT_REPORTER$或$WEBCOMPAT$报告。谢谢！&hearts;",
+
+    "placeholders": {
+      "IN_PRODUCT_REPORTER": {
+        "content": "$1"
+      },
+      "WEBCOMPAT": {
+        "content": "$2"
+      }
+    }
+  },
+
+  "inProductReporterLinkText": {
+    "message": "使用 \"Report broken site\" 功能"
+  },
+
+  "webcompatLinkText": {
+    "message": "在 WebCompat.com"
+  },
+
+  "maskStatusOn": {
+    "message": "扩展已开启！在这个网站上，我假装是谷歌浏览器。"
+  },
+
+  "maskStatusOff": {
+    "message": "扩展已关闭。 浏览器看起来像火狐浏览器。"
+  },
+
+  "maskStatusUnsupported": {
+    "message": "扩展无法在此网站上使用。"
+  },
+
+  "manageSitesButton": {
+    "message": "添加或移除网站"
+  },
+
+  "manageSitesFallback": {
+    "message": "要添加或移除网站，请打开扩展管理器，选择Chrome Mask，然后点击设置。"
+  },
+
+  "addSiteTitle": {
+    "message": "增加网站"
+  },
+
+  "addSiteButton": {
+    "message": "增加网站"
+  },
+
+  "addSiteHostnameExplanation": {
+    "message": "注意：您必须输入完整的域名。如果您输入example.com，Chrome Mask将不会在www.example.com上生效！"
+  },
+
+  "addSiteErrorInvalid": {
+    "message": "请输入有效的域名！"
+  },
+
+  "addSiteErrorAlreadyActive": {
+    "message": "Chrome Mask已经在此域名上启用了！"
+  },
+
+  "maskedSitesTitle": {
+    "message": "当前已启用的站点"
+  },
+
+  "siteListRemoveButton": {
+    "message": "移除"
+  },
+
+  "siteListEmpty": {
+    "message": "您还没有在任何网站上启用Chrome Mask！"
+  }
+}
