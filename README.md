@@ -2,7 +2,7 @@
 
 A little Firefox Extension that provides a one-click toggle to spoof as Chrome in Firefox - or, in other words, to put on the Chrome Mask.
 
-This extension is available on addons.mozilla.org, [install this extension via addons.mozilla.org](https://addons.mozilla.org/addon/chrome-mask/). The extension is available for both Firefox on Desktops (all supported operating systems), and for Firefox for Android.
+This extension is available on addons.mozilla.org, [install this extension via addons.mozilla.org](https://addons.mozilla.org/addon/chrome-simulator). The extension is available for both Firefox on Desktops (all supported operating systems), and for Firefox for Android.
 
 ## Why?
 
