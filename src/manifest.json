@@ -34,5 +34,14 @@
   },
   "options_ui": {
     "page": "options.html"
+  },
+  "commands": {
+    "toggle_mask": {
+      "suggested_key": {
+        "default": "Ctrl+Alt+M",
+        "mac": "MacCtrl+Alt+M"
+      },
+      "description": "Toggle on/off the mask"
+    }
   }
 }
