@@ -7,6 +7,30 @@
     "message": "Mettez un masque à Firefox afin qu'il ressemble à Chrome sur les sites Web qui autrement ne fonctionneraient pas."
   },
 
+  "breakageWarning": {
+    "message": "Bien que Chrome Mask puisse vous aider si vous voyez un message « votre navigateur n'est pas supporté », il peut causer des problèmes de façon inattendu sur certains sites."
+  },
+
+  "reportBrokenSite": {
+    "message": "Si vous trouvez qu'un site fonctionne mieux avec Chrome Mask activé, s'il-vous-plaît veuillez le rapporter $IN_PRODUCT_REPORTER$ ou $WEBCOMPAT$. Merci! &hearts;",
+    "placeholders": {
+      "IN_PRODUCT_REPORTER": {
+        "content": "$1"
+      },
+      "WEBCOMPAT": {
+        "content": "$2"
+      }
+    }
+  },
+
+  "inProductReporterLinkText": {
+    "message": "en utilisant l’outil Signaler des problème avec ce site"
+  },
+
+  "webcompatLinkText": {
+    "message": "sur WebCompat.com"
+  },
+
   "maskStatusOn": {
     "message": "Le masque est activé! Je prétends d'être Chrome pour ce site."
   },
@@ -17,5 +41,45 @@
 
   "maskStatusUnsupported": {
     "message": "Le masque ne peut pas fonctionner sur ce site."
+  },
+
+  "manageSitesButton": {
+    "message": "Ajouter ou supprimer des sites"
+  },
+
+  "manageSitesFallback": {
+    "message": "Pour ajouter ou supprimer des sites, veuillez ouvrir le gestionnaire d'extensions, sélectionner Chrome Mask et appuyer sur Préfèrences."
+  },
+
+  "addSiteTitle": {
+    "message": "Ajouter un site"
+  },
+
+  "addSiteButton": {
+    "message": "Ajouter un site"
+  },
+
+  "addSiteHostnameExplanation": {
+    "message": "Note: Entrez toujours un nom de domaine complet. Si vous entrez example.com, Chrome Mask ne sera pas actif sur www.example.com"
+  },
+
+  "addSiteErrorInvalid": {
+    "message": "Entrez un nom de domaine valide!"
+  },
+
+  "addSiteErrorAlreadyActive": {
+    "message": "Chrome Mask est déjà activé sur ce site!"
+  },
+
+  "maskedSitesTitle": {
+    "message": "Sites avec un masque actif"
+  },
+
+  "siteListRemoveButton": {
+    "message": "Supprimer"
+  },
+
+  "siteListEmpty": {
+    "message": "Vous n'avez pas encore activé Chrome Mask sur un site!"
   }
 }
