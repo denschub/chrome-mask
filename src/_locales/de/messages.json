@@ -43,6 +43,14 @@
     "message": "Die Maske kann auf dieser Seite nicht funktionieren."
   },
 
+  "preferencesButton": {
+    "message": "Einstellungen"
+  },
+
+  "preferencesFallback": {
+    "message": "Um Einstellungen zu verändern, benutze bitte den Extension Manager, wähle dort Chrome Mask aus, und öffne dort die Einstellungen."
+  },
+
   "addSiteTitle": {
     "message": "Hinzufügen"
   },
@@ -73,5 +81,23 @@
 
   "siteListEmpty": {
     "message": "Die Chrome-Maske ist noch auf keiner Seite aktiv!"
+  },
+  "shortcutsTitle": {
+    "message": "Tastenkürzel"
+  },
+  "shortcutsOpenPanelButton": {
+    "message": "Tastenkürzel einstellen"
+  },
+  "shortcutsCommandCombo": {
+    "message": "Tasten"
+  },
+  "shortcutsCommandDescription": {
+    "message": "Beschreibung"
+  },
+  "shortcutsCommandItemShortcutUndefined": {
+    "message": "Nicht gesetzt"
+  },
+  "shortcutsToggleMask": {
+    "message": "Die Maske für die aktuelle Seite ein- oder ausschalten"
   }
 }
