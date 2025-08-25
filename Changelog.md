@@ -1,4 +1,4 @@
-# 7.0.0 (unreleased)
+# 7.0.0
 
 - Adds support for an optional keyboard shortcut to toggle Chrome Mask. Thank you very much, [@dannycolin](https://github.com/dannycolin)!
 
