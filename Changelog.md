@@ -1,3 +1,7 @@
+# 7.0.1
+
+Fixed multiple regressions when running Chrome Mask in Firefox for Android. Firefox for Android now correctly uses a Chrome Android user agent string, not Chrome on Windows. The menu entry now also again correctly identifies if Chrome Mask is enabled or not. Sorry for that!
+
 # 7.0.0
 
 - Adds support for an optional keyboard shortcut to toggle Chrome Mask. Thank you very much, [@dannycolin](https://github.com/dannycolin)!

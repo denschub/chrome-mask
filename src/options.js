@@ -118,7 +118,9 @@ async function setupKeyboardShortcuts() {
     const shortcutsOpenPanelButton = document.getElementById("shortcuts-open-panel-button");
     shortcutsOpenPanelButton.textContent = browser.i18n.getMessage("shortcutsOpenPanelButton");
     shortcutsOpenPanelButton.addEventListener("click", async () => {
-      await browser.commands.openShortcutSettings();
+      if (browser.commands?.openShortcutSettings) {
+        await browser.commands.openShortcutSettings();
+      }
     });
     shortcutsOpenPanelButton.style.display = "block";
   }

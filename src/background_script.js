@@ -108,15 +108,17 @@ async function init() {
     }
   });
 
-  browser.commands.onCommand.addListener(async (command, tab) => {
-    switch (command) {
-      case "toggle_mask":
-        await toggleMask(tab);
-        await contentScriptSetup();
-        browser.tabs.reload(tab.id, { bypassCache: true });
-        break;
-    }
-  });
+  if (browser.commands?.onCommand) {
+    browser.commands.onCommand.addListener(async (command, tab) => {
+      switch (command) {
+        case "toggle_mask":
+          await toggleMask(tab);
+          await contentScriptSetup();
+          browser.tabs.reload(tab.id, { bypassCache: true });
+          break;
+      }
+    });
+  }
 
   browser.tabs.onUpdated.addListener(async (tabId, _changeInfo, _tabInfo) => {
     const currentTab = await browser.tabs.get(tabId);
