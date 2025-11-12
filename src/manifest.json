@@ -4,7 +4,7 @@
   "description": "__MSG_extensionDescription__",
   "author": "Dennis Schubert",
   "homepage_url": "https://github.com/denschub/chrome-mask",
-  "version": "7.0.1",
+  "version": "8.0.0",
   "default_locale": "en",
   "browser_specific_settings": {
     "gecko": {

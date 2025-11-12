@@ -1,3 +1,7 @@
+if (typeof window.InstallTrigger !== "undefined") {
+  delete window.wrappedJSObject.InstallTrigger;
+}
+
 Object.defineProperty(window.navigator.wrappedJSObject, "appVersion", {
   get: exportFunction(function () {
     return navigator.userAgent.replace("Mozilla/", "");

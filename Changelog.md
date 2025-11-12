@@ -1,3 +1,7 @@
+# 8.0.0
+
+The addon now removes `window.InstallTrigger` to pass very common patterns like `if ("InstallTrigger" in window)` or `if (typeof window.InstallTrigger !== "undefined")`.
+
 # 7.0.1
 
 Fixed multiple regressions when running Chrome Mask in Firefox for Android. Firefox for Android now correctly uses a Chrome Android user agent string, not Chrome on Windows. The menu entry now also again correctly identifies if Chrome Mask is enabled or not. Sorry for that!
